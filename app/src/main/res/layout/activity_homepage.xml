@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rg_tabs" />
+
+    <RadioGroup
+        android:id="@+id/rg_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/bg_gray">
+
+        <RadioButton
+            android:id="@+id/rb_school"
+            android:text="@string/school_info"
+            android:drawableTop="@drawable/tab_school_color_selector"
+            style="@style/TabRadioButton"/>
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:checked="true"
+            android:text="@string/homepage"
+            android:drawableTop="@drawable/tab_home_color_selector"
+            style="@style/TabRadioButton" />
+
+        <RadioButton
+            android:id="@+id/rb_list"
+            android:text="@string/music_list"
+            android:drawableTop="@drawable/tab_list_color_selector"
+            style="@style/TabRadioButton" />
+
+    </RadioGroup>
+
+</RelativeLayout>
